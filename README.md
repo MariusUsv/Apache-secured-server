@@ -40,4 +40,5 @@ This project presents the configuration and security of a SOHO LAN connected to 
 Add here the saved screenshots from the project.
 
 ## Author
-Andronic Marius-Zaharia
+Student: Marius Zaharia Andronic
+Facultatea: Fiesc Calculatoare – dual
