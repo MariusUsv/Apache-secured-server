@@ -37,7 +37,21 @@ This project presents the configuration and security of a SOHO LAN connected to 
 - `scripts/` – installation script
 
 ## Screenshots
-Add here the saved screenshots from the project.
+
+### Apache running
+![Apache running](screenshots/apache_service_running.png)
+
+### Apache port 8008
+![Apache port 8008](screenshots/apache_ports_8008.png)
+
+### Basic authentication
+![Basic authentication](screenshots/basic_auth_prompt.png)
+
+### Access denied (403)
+![403 Forbidden](screenshots/access_denied_403.png)
+
+### XRDP remote connection
+![RDP connection](screenshots/rdp_connection_success.png)
 
 ## Author
 Student: Marius Zaharia Andronic
