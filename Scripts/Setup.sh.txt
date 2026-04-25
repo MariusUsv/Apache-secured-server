@@ -1,0 +1,7 @@
+
+sudo apt update
+sudo apt install apache2 xrdp apache2-utils -y
+sudo systemctl enable apache2
+sudo systemctl enable xrdp
+sudo systemctl start apache2
+sudo systemctl start xrdp
