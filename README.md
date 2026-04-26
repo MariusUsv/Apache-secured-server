@@ -1,57 +1,153 @@
-# SOHO Network Security with Apache and XRDP
+# 🔐 Apache Secured Server with XRDP Remote Access
 
-## Overview
-This project presents the configuration and security of a SOHO LAN connected to the Internet through a virtual router. The implementation was performed on Ubuntu 22.04 in VirtualBox.
+> Linux server configuration project: Apache security + remote desktop access (XRDP)
 
-## Objectives
-- configure a virtual SOHO network
-- verify IP addressing and routing
-- install and configure Apache
-- run the web server on port 8008
-- secure web resources
-- configure Remote Desktop access with XRDP
-- test and validate the implemented services
+---
 
-## Technologies Used
-- Ubuntu 22.04 LTS
-- Oracle VirtualBox
+## 📌 Overview
+
+This project demonstrates the configuration of a secure Apache web server and remote desktop access using XRDP on Ubuntu.
+
+It includes:
+- Apache web server setup
+- Basic authentication using `.htpasswd`
+- Access restriction (403 Forbidden)
+- Custom port configuration
+- Remote desktop access via XRDP
+
+---
+
+## 🎯 Why This Project
+
+This project was built to demonstrate practical system administration skills in a real Linux environment.
+
+It focuses on:
+- configuring and securing web services
+- managing remote access
+- understanding networking behavior in a virtual machine setup
+
+---
+
+## 🧠 Skills Demonstrated
+
+- Linux system administration
+- Apache configuration and security
+- Authentication using `.htpasswd`
+- VirtualHost configuration
+- Port management
+- XRDP remote desktop setup
+- Basic networking (IP, routing)
+
+---
+
+## ⚙️ Technologies Used
+
+- Ubuntu 22.04
 - Apache2
 - XRDP
-- Windows client
+- VirtualBox
+- Linux CLI tools
 
-## Network Architecture
-- NAT adapter for Internet access
-- virtual LAN environment for testing
-- Apache running on port 8008
-- XRDP running on port 3389
+---
 
-## Security Features
-- Basic authentication for protected web content
-- IP-based access restriction
-- separation between public and restricted directories
+## 🔧 Apache Configuration
 
-## Repository Structure
-- `docs/` – project report
-- `screenshots/` – service validation screenshots
-- `configs/` – Apache and access control configuration
-- `scripts/` – installation script
+### ➤ Custom Port (8008)
 
-## Screenshots
+Apache was configured to run on a custom port:
 
-### Apache Setup & Security
-![Apache Running](screenshots/apache/01_apache_service_running.png)
-![Port 8008](screenshots/apache/02_apache_ports_8008.png)
-![Default Page](screenshots/apache/03_apache_default_page.png)
-![403 Forbidden](screenshots/apache/04_apache_403_forbidden.png)
-![User Authentication](screenshots/apache/05_htpasswd_user_created.png)
+![Apache Port Configuration](screenshots/apache_ports_8008.png)
 
-### Network Configuration
-![IP Configuration](screenshots/network/07_network_ip_config.png)
-![Routing Table](screenshots/network/08_ip_route_terminal.png)
+---
 
-### Remote Desktop (XRDP)
-![XRDP Service](screenshots/xrdp/09_xrdp_service_running.png)
-![Remote Connection](screenshots/xrdp/10_xrdp_remote_connection.png)
-## Author
-Student: Marius Zaharia Andronic
-Facultatea: Fiesc Calculatoare – dual
+### ➤ VirtualHost Setup
+
+Custom VirtualHost configuration:
+
+![VirtualHost Config](screenshots/apache_virtualhost_config.png)
+
+---
+
+### ➤ Apache Running
+
+Apache service successfully started:
+
+![Apache Running](screenshots/apache_service_running.png)
+
+---
+
+## 🔐 Security Implementation
+
+### ➤ Password Authentication (.htpasswd)
+
+User authentication configured:
+
+![htpasswd Setup](screenshots/apache_htpasswd_setup.png)
+
+---
+
+### ➤ Login Prompt
+
+Browser authentication required:
+
+![Auth Prompt](screenshots/basic_auth_prompt.png)
+
+---
+
+### ➤ Restricted Access (403 Forbidden)
+
+Access to protected directory blocked:
+
+![403 Forbidden](screenshots/access_denied_403.png)
+
+---
+
+## 🌐 Networking
+
+- Localhost access via custom port
+- Routing and IP configuration inside VM
+
+---
+
+## 🖥️ XRDP Remote Desktop
+
+### ➤ XRDP Service Running
+
+XRDP service active:
+
+![XRDP Service](screenshots/xrdp_service_running.png)
+
+---
+
+### ➤ Remote Desktop Connection
+
+Successful connection from Windows:
+
+![RDP Connection](screenshots/rdp_connection_success.png)
+
+---
+
+## 📊 How It Works
+
+1. Apache serves content on port 8008  
+2. Certain directories are protected using `.htpasswd`  
+3. Unauthorized users receive **403 Forbidden**  
+4. XRDP allows remote graphical access to the system  
+5. All services run inside a virtualized Ubuntu environment  
+
+---
+
+## 📝 Notes
+
+- XRDP uses the RDP protocol to provide GUI access to Linux systems :contentReference[oaicite:0]{index=0}  
+- Apache authentication is based on user/password validation via `.htpasswd`  
+- The project simulates a real-world secured server environment  
+
+---
+
+## 👤 Author
+
+**Marius Zaharia Andronic**  
+Computer Engineering Student (Dual Program)
+
+---
