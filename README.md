@@ -56,7 +56,7 @@ It focuses on:
 
 Apache was configured to run on a custom port:
 
-![Apache Port](capturi%20de%20ecran/apache_ports_8008.png)
+![Apache Port Configuration](https://github.com/MariusUsv/Apache-secured-server/blob/main/screenshots/apache_ports_8008.png)
 
 ---
 
